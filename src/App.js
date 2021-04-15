@@ -1,4 +1,5 @@
 import "./App.css";
+import smashBurger from "./assets/smashBurger.jpg";
 
 function Header(props) {
   return (
@@ -31,6 +32,7 @@ function Main(props) {
   return (
     <div>
       <h4>WHO WE ARE</h4>
+      <img src={smashBurger} height={500} alt="burger" />
       <p>
         Dexter Akahoshi is the founder of Izakaya Akahoshi. While working a
         regular 9-5 job at zZz LLC, he started a backyard catering company as a

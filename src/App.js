@@ -14,7 +14,7 @@ function Navigation(props) {
       <h3>Menu</h3>
       <ul>
         {props.menuItems.map((burger) => (
-          <li>{burger}</li>
+          <li key={burger.id}>{burger.title}</li>
         ))}
       </ul>
       <h3>Location</h3>
@@ -51,12 +51,14 @@ function Footer(props) {
 
 const menuItems = ["Smash Burger", "Double Smash Burger", "Vegan Smash Burger"];
 
+const menuObjects = menuItems.map((burger, i) => ({ id: i, title: burger }));
+
 function App() {
   return (
     <div className="App">
       <Header name="Izakaya Akahoshi" />
       <Navigation
-        menuItems={menuItems}
+        menuItems={menuObjects}
         location="Anaheim"
         hours="Wed-Fri 12PM-10PM"
         number="949-780-7141"

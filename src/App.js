@@ -1,15 +1,15 @@
 import "./App.css";
 import smashBurger from "./assets/smashBurger.jpg";
 
-function Header(props) {
+const Header = (props) => {
   return (
     <header>
       <h1>{props.name}</h1>
     </header>
   );
-}
+};
 
-function Navigation(props) {
+const Navigation = (props) => {
   return (
     <div>
       <h3>Menu</h3>
@@ -26,9 +26,9 @@ function Navigation(props) {
       <p>{props.number}</p>
     </div>
   );
-}
+};
 
-function Main(props) {
+const Main = (props) => {
   return (
     <div>
       <h4>WHO WE ARE</h4>
@@ -41,21 +41,21 @@ function Main(props) {
       </p>
     </div>
   );
-}
+};
 
-function Footer(props) {
+const Footer = (props) => {
   return (
     <footer>
       <p>Copyright {props.year}</p>
     </footer>
   );
-}
+};
 
 const menuItems = ["Smash Burger", "Double Smash Burger", "Vegan Smash Burger"];
 
 const menuObjects = menuItems.map((burger, i) => ({ id: i, title: burger }));
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header name="Izakaya Akahoshi" />
@@ -69,6 +69,6 @@ function App() {
       <Footer year={new Date().getFullYear()} />
     </div>
   );
-}
+};
 
 export default App;
